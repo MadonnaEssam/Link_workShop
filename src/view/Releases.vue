@@ -48,6 +48,7 @@ export default {
     },
     methods: {
        readMore(id){
+           debugger
            this.$router.push({
                name:'ReleasesDetails',params:{id:id}
            })

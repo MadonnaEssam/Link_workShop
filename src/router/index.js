@@ -20,7 +20,7 @@ export default new Router({
 
   routes: [
     { path: "/", component: Home },
-    {path:"/ReleasesDetails", component:ReleasesDetails}
+    {path:"/ReleasesDetails", component:ReleasesDetails,name:'ReleasesDetails'}
     // Just use them normally in the route config
     // { path: "/survey", component: Survey },
     // {
