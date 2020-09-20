@@ -7,10 +7,12 @@
         <div class="review-block">
             <div class="container">
                 <div class="row">
-                    <div class="column" v-for="(article,index) in articles" :key=" index < 5" >
-                        <div class="review-box" :style="{ backgroundImage:`linear-gradient(rgb(0 0 0 / 47%), rgb(0, 0, 0, 0.4)),url(${article.urlToImage})`  }">
+                    <div class="column" v-for="(article,index) in articles" :key=" index ">
+                        <div class="review-box" v-if="index<4" :style="{ background:`linear-gradient(rgb(0 0 0 / 47%), rgb(0, 0, 0, 0.4)),url(${article.urlToImage})`  }">
 
-                            <h5>{{article.publishedAt}}</h5>
+                            <h5 v-html="article.publishedAt.split(' ')[0]"></h5>
+                            <h5 v-html="article.publishedAt.split(' ')[1]"></h5>
+                            <h5 v-html="article.publishedAt.split(' ')[2]"></h5>
 
                             <div class="review-message">
                                 <p>{{article.title}}</p>
@@ -47,14 +49,17 @@ export default {
         this.getRelease()
     },
     methods: {
-        showAllRelease(){
+        showAllRelease() {
             this.$router.push('AllReleases')
         },
-       readMore(id){
-           this.$router.push({
-               name:'ReleasesDetails',params:{id:id}
-           })
-       },
+        readMore(id) {
+            this.$router.push({
+                name: 'ReleasesDetails',
+                params: {
+                    id: id
+                }
+            })
+        },
         getRelease() {
 
             for (var i = 0; i < this.myJson.articles.length; i++) {
@@ -72,3 +77,9 @@ export default {
     },
 }
 </script>
+
+<style>
+.review-box:hover {
+    background-color: greenyellow !important;
+}
+</style>

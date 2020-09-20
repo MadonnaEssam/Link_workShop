@@ -79,9 +79,7 @@ export default {
         this.getRelease()
     },
     methods: {
-        showAllRelease() {
-            this.$router.push('AllReleases')
-        },
+       
         readMore(id) {
             this.$router.push({
                 name: 'ReleasesDetails',
@@ -91,7 +89,6 @@ export default {
             })
         },
         getRelease() {
-
             for (var i = 0; i < this.myJson.articles.length; i++) {
 
                 this.myJson.articles[i].date = moment(this.myJson.articles[i].publishedAt).format('YYYY-MM-DD hh:mm:ss')
