@@ -2,8 +2,9 @@
 <div>
     <!-- testimonial Section start-->
     <section id="testimonial" class="testimonial">
-
-        <div class="container">
+<h3>How we Have helped</h3>
+<h6> See How Al Jalila Foundation have promoted change locally and to the world</h6>
+        <div class="container"> 
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <carousel :className='"testimonial-carousel "' :loop=true :items=2 :nav=true :dots=false :dotsEach=true :autoplay=false :responsive="{0:{items:1,dots:false,nav:true},768:{items:2,dots:false,nav:true},992:{nav:true}}">

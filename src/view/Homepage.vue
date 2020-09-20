@@ -4,6 +4,7 @@
     <Carousel />
     <Help />
     <Product/>
+    <Releases/>
     <Footer />
 
 </v-app>
@@ -18,6 +19,7 @@ export default {
         Carousel: () => import('./Carousel'),
         Help: () => import('./Help'),
         Product:()=>import('./Product'),
+        Releases:()=>import ('./Releases'),
         Footer: () => import('@/components/Footer')
 
     },

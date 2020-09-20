@@ -10,7 +10,7 @@ Vue.use(Router)
 
 
 const Home = () => import("../view/Homepage.vue");
-
+const ReleasesDetails=() => import ("../view/ReleasesDetails")
 
 
 export default new Router({
@@ -20,6 +20,7 @@ export default new Router({
 
   routes: [
     { path: "/", component: Home },
+    {path:"/ReleasesDetails", component:ReleasesDetails}
     // Just use them normally in the route config
     // { path: "/survey", component: Survey },
     // {

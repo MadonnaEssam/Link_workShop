@@ -1754,6 +1754,9 @@
 
 }
 @media(max-width: 600px) {
+  .column {
+    width: 100%;
+  }
   .testimonial-text {
     box-shadow: 0 0 10px 0 rgba(170, 170, 170, 0.25);
   }
