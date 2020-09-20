@@ -5,6 +5,7 @@
     <Help />
     <Product/>
     <Releases/>
+    <AllReleases/>
     <Footer />
 
 </v-app>
@@ -20,6 +21,7 @@ export default {
         Help: () => import('./Help'),
         Product:()=>import('./Product'),
         Releases:()=>import ('./Releases'),
+        AllReleases:()=>('./AllReleases'),
         Footer: () => import('@/components/Footer')
 
     },

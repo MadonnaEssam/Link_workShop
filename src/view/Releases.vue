@@ -3,7 +3,7 @@
 
     <section>
         <h6> Our Latest </h6>
-        <h3> Press Releases</h3>
+        <h3 @click="showAllRelease"> Press Releases</h3>
         <div class="review-block">
             <div class="container">
                 <div class="row">
@@ -35,7 +35,7 @@ import json from '../../newsapi.json'
 import moment from "moment";
 
 export default {
-    name: 'Review',
+    name: 'Releases',
     data() {
         return {
             myJson: json,
@@ -47,8 +47,10 @@ export default {
         this.getRelease()
     },
     methods: {
+        showAllRelease(){
+            this.$router.push('AllReleases')
+        },
        readMore(id){
-           debugger
            this.$router.push({
                name:'ReleasesDetails',params:{id:id}
            })

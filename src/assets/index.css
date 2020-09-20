@@ -247,11 +247,11 @@ section {
 .breadcrumb-bg {
   background-color: #f7f7f7;
   margin: 0 auto;
-  padding-top: 15px;
-  padding-bottom: 15px; }
+ 
+ }
   .breadcrumb-bg h2 {
     margin: 0;
-    padding: 0.75rem 0; }
+   }
 
 .blog-bradcrumb {
   float: right; }
