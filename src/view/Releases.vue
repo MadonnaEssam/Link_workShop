@@ -50,7 +50,7 @@ export default {
     },
     methods: {
         showAllRelease() {
-            this.$router.push('AllReleases')
+            this.$router.push({name: 'AllReleases'})
         },
         readMore(id) {
             this.$router.push({

@@ -26,13 +26,16 @@
             <v-container>
                 <h3 class="text-left"> Press Releases</h3>
                 <v-col cols="6">
-                    <v-select v-model="e1" :items="states" menu-props="auto" label="Select" hide-details prepend-icon="map" single-line></v-select>
+                    <select class="" style="display:block" v-model="selected" required="required" @change="onSelect($event)">
+                        <option v-for="(option, index) in states" v-bind:value="option.id" :key="index">{{ option.name }}</option>
+                    </select>
+                    <!-- <v-select v-model="e1" v-bind:items="states" label="Select" item-text="name" item-value="id" :hint="`${e1.name}, ${e1.id}`"></v-select> -->
                 </v-col>
                 <div class="review-block">
                     <div class="container">
                         <div class="row  margin-bottom">
-                            <div class="col-lg-4 col-md-6" v-for="(article,index) in articles" :key=" index < 5">
-                                <div class="review-box" :style="{ backgroundImage:`linear-gradient(rgb(0 0 0 / 47%), rgb(0, 0, 0, 0.4)),url(${article.urlToImage})`  }">
+                            <div class="col-lg-4 col-md-6" v-for="(article,index) in articles" :key=" index">
+                                <div class="review-box" v-if="index<4" :style="{ backgroundImage:`linear-gradient(rgb(0 0 0 / 47%), rgb(0, 0, 0, 0.4)),url(${article.urlToImage})`  }">
 
                                     <h5>{{article.publishedAt}}</h5>
 
@@ -59,7 +62,6 @@
 <script>
 import json from '../../newsapi.json'
 import moment from "moment";
-
 export default {
     name: 'Releases',
     components: {
@@ -72,14 +74,19 @@ export default {
             myJson: json,
             articles: [],
             states: [],
-            e1:null
+            selected: null
+
         }
     },
     mounted() {
-        this.getRelease()
+        this.getRelease();
+        this.getDropDown()
     },
     methods: {
-       
+        onSelect(e) {
+            var item = e.target.value
+            console.log(item)
+        },
         readMore(id) {
             this.$router.push({
                 name: 'ReleasesDetails',
@@ -87,6 +94,11 @@ export default {
                     id: id
                 }
             })
+        },
+        getDropDown() {
+            for (var y = 0; y < this.myJson.sourceCategory.length; y++) {
+                this.states.push(this.myJson.sourceCategory[y])
+            }
         },
         getRelease() {
             for (var i = 0; i < this.myJson.articles.length; i++) {
@@ -98,11 +110,14 @@ export default {
 
             }
             this.articles = this.articles.sort((a, b) => b.date - a.date)
-            for (var y = 0; y < this.myJson.sourceCategory.length; i++) {
-                this.states.push(this.myJson.sourceCategory[y])
-            }
 
         }
     },
 }
 </script>
+
+<style>
+.v-select {
+    display: grid;
+}
+</style>
