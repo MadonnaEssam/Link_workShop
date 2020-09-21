@@ -2004,8 +2004,8 @@ ul {
 }
 
 .address-bar {
-  min-height: 600px;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/img/img1.b2ee42cb.jpg) no-repeat;
+  min-height: 540px;
+  background: $background_image;
  
   margin: 0;
   display: flex;
@@ -2708,14 +2708,17 @@ iframe.video-play {
     border-radius: 100%;
   }
   h5 {
-    color: $color_scooter;
+    text-align: left;
+    color: white;
     font-size: 18px;
-    margin-top: 20px;
-    margin-bottom: 5px;
+
     text-transform: capitalize;
     font-weight: 600;
   }
   p{
+   color:$white;
+   text-align: left;
+
     font-size: 14px;
     margin-top: 10px;
   }

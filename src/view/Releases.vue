@@ -80,6 +80,6 @@ export default {
 
 <style>
 .review-box:hover {
-    background-color: greenyellow !important;
+    background: greenyellow !important;
 }
 </style>

@@ -2033,14 +2033,7 @@ iframe.video-play {
   .review-box img {
     height: 60px;
     border-radius: 100%; }
-  .review-box h5 {
-    text-align: left;
-    color: #19d0de;
-    font-size: 18px;
-    /* margin-top: 20px; */
-    /* margin-bottom: 5px; */
-    text-transform: capitalize+;
-    font-weight: 600; }
+  
   .review-box p {
     font-size: 14px;
     margin-top: 10px; }
