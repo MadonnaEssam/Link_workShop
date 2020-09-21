@@ -27,7 +27,11 @@
                     <h3 class="text-left"> Press Releases</h3>
                     <v-col cols="6">
 
-                        <v-select v-model="select" @change='changedLabel(select)' :items="items" item-text="name" item-value="id" label="Select" persistent-hint return-object single-line></v-select>
+                        <v-select v-model="select" @change='changedLabel(select)' :items="items" item-text="name" item-value="id" label="Category" persistent-hint return-object single-line></v-select>
+                    </v-col>
+                    <v-col cols="6">
+                          <v-text-field>
+                          </v-text-field>
                     </v-col>
                     <div class="review-block">
                         <div class="container">
@@ -76,7 +80,7 @@ export default {
             items: [],
             select: {
                 id: 1,
-                name: "TechCrunch"
+                name: "Category"
             }
 
         }
