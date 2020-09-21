@@ -24,20 +24,24 @@
 
             <section>
                 <v-container>
-                    <h3 class="text-left"> Press Releases</h3>
-                    <v-col cols="6">
 
-                        <v-select v-model="select" @change='changedLabel(select)' :items="items" item-text="name" item-value="id" label="Category" persistent-hint return-object single-line></v-select>
-                    </v-col>
-                    <v-col cols="6">
-                          <v-text-field>
-                          </v-text-field>
-                    </v-col>
+                    <h3 class="text-left"> Press Releases</h3>
+                    <v-row>
+                        <v-col cols="4">
+
+                            <v-select v-model="select" @change='changedLabel(select)' :items="items" item-text="name" item-value="id" label="Category" outlined></v-select>
+                        </v-col>
+                        <v-col cols="6">
+
+                            <v-autocomplete v-model="searchString" :items="Titles" solo chips @change="pushOrRemoveStates(searchString)" color="orange" label="Search" item-text="name" item-value="name" clearable append-icon="search" />
+
+                        </v-col>
+                    </v-row>
                     <div class="review-block">
                         <div class="container">
                             <div class="row  margin-bottom">
-                                <div class="col-lg-4 col-md-6" v-for="(article,index) in articles" :key=" index">
-                                    <div class="review-box" :style="{ backgroundImage:`linear-gradient(rgb(0 0 0 / 47%), rgb(0, 0, 0, 0.4)),url(${article.urlToImage})`  }">
+                                <div class="col-lg-3 col-md-6" v-for="(article,index) in articles" :key=" index">
+                                    <div class="review-box"  :style="{ backgroundImage:`linear-gradient(rgb(0 0 0 / 47%), rgb(0, 0, 0, 0.4)),url(${article.urlToImage})`  }">
 
                                         <h5>{{article.publishedAt}}</h5>
 
@@ -50,6 +54,7 @@
                                     </div>
 
                                 </div>
+                                <button type="button" class="btn btn-custom theme-color" @click="seeAll(id=8)">Read More</button>
 
                             </div>
                         </div>
@@ -81,24 +86,56 @@ export default {
             select: {
                 id: 1,
                 name: "Category"
-            }
+            },
+            searchString: '',
+            Titles: []
 
         }
     },
     mounted() {
         this.getRelease();
-        this.getDropDown()
+        this.getDropDown();
+        this.getAllTitles()
     },
     methods: {
+        seeAll( id) {
+            // this.articles = []
+            // this.getRelease()
+            var y = this.articles;
+            // this.articles = []
+            for (var i = 0; i < y.length; i++) {
+                if (y[i].id > id) {
+                    y[i].publishedAt = moment(y[i].publishedAt).format('DD MMMM dddd,YYYY')
+                                    this.articles.push(y[i])
+
+                }
+            }
+        },
+        pushOrRemoveStates(item) {
+            this.getRelease()
+            var y = this.articles;
+            this.articles = []
+            for (var i = 0; i < y.length; i++) {
+                if (y[i].title == item) {
+                    y[i].publishedAt = moment(y[i].publishedAt).format('DD MMMM dddd,YYYY')
+
+                    this.articles.push(y[i])
+                }
+                if (item === undefined) {
+                    this.getRelease()
+
+                }
+            }
+        },
         changedLabel(e) {
             this.getRelease()
             console.log('e.name' + e.name + 'e.id' + e.id)
             var y = this.articles;
             this.articles = []
             for (var i = 0; i < y.length; i++) {
-                if (y[i].sourceID == e.id) {
+                if (y[i].sourceID == e) {
                     y[i].publishedAt = moment(y[i].publishedAt).format('DD MMMM dddd,YYYY')
-            
+
                     this.articles.push(y[i])
                 }
             }
@@ -118,6 +155,11 @@ export default {
                 this.items.push(this.myJson.sourceCategory[y])
             }
         },
+        getAllTitles() {
+            for (var y = 0; y < this.myJson.articles.length; y++) {
+                this.Titles.push(this.myJson.articles[y].title)
+            }
+        },
         getRelease() {
             for (var i = 0; i < this.myJson.articles.length; i++) {
 
@@ -133,3 +175,9 @@ export default {
     },
 }
 </script>
+
+<style>
+.input-group .form-control {
+    min-height: 58px;
+}
+</style>>

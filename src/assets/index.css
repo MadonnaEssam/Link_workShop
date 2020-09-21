@@ -331,7 +331,10 @@ ul {
   background-size: 300% 100%;
   transition: all .4s ease-in-out; }
   .btn-custom.theme-color {
-    background-image: linear-gradient(to right, #19d3dc, #0bc2f9, #0bc2f9, #19d2dd); }
+    background: transparent;
+    background-image: wheat;
+    border: 1px solid white;
+    color: white; }
   .btn-custom:hover {
     background-position: 100% 0;
     transition: all .4s ease-in-out; }

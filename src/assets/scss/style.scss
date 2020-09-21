@@ -371,8 +371,10 @@ ul {
   background-size: 300% 100%;
   transition: all .4s ease-in-out;
   &.theme-color {
-    background-image: linear-gradient(to right, #19d3dc, #018695, #018695, #19d2dd);
-  }
+    background: transparent;
+    background-image: wheat;
+    border: 1px solid white;
+    color: white;  }
   &:hover {
     background-position: 100% 0;
     transition: all .4s ease-in-out;
@@ -2698,11 +2700,22 @@ iframe.video-play {
   margin-top: 30px;
 
 }
+.gainsboro{
+  background-color: $gray;
+  h3{color: $color_tapa;}
+  a{color: $color_tapa!important;}
+  .white--text{color:$white!important}
+}
 .review-box {
-  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.10);
-  padding: 30px;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.1);
+  padding: 10px;
   text-align: center;
-  background-color: $white;
+  background-color: white;
   img{
     height: 60px;
     border-radius: 100%;

@@ -1,6 +1,6 @@
 <template>
-<v-footer id="home-footer" dark min-height="72">
-    <v-container class="white">
+<div class="gainsboro">
+    <v-container >
         <v-row>
             <v-col cols="12" md="2" v-for="(s, i) in menu" :key="i" class=" pa-1 pa-md-0">
                 <h3>{{s.title}}</h3>
@@ -13,6 +13,7 @@
             </v-col>
         </v-row>
     </v-container>
+<v-footer id="home-footer" dark min-height="72">
 
     <v-container>
 
@@ -36,6 +37,7 @@
     </v-container>
 
 </v-footer>
+</div>
 </template>
 
 <script>

@@ -8,7 +8,7 @@
             <div class="container">
                 <div class="row">
                     <div class="column" v-for="(article,index) in articles" :key=" index ">
-                        <div class="review-box" v-if="index<4" :style="{ background:`linear-gradient(rgb(0 0 0 / 47%), rgb(0, 0, 0, 0.4)),url(${article.urlToImage})`  }">
+                        <div class="review-box" v-if="index<4" :style="{ backgroundImage:`linear-gradient(rgb(0 0 0 / 47%), rgb(0, 0, 0, 0.4)),url(${article.urlToImage})`  }">
 
                             <h5 v-html="article.publishedAt.split(' ')[0]"></h5>
                             <h5 v-html="article.publishedAt.split(' ')[1]"></h5>
@@ -80,6 +80,6 @@ export default {
 
 <style>
 .review-box:hover {
-    background: greenyellow !important;
-}
+   background: #84c323 !important;
+    background-image: none!important;}
 </style>
