@@ -12,9 +12,11 @@
                         <div class="col-md-6 col-sm-6 col-text-center">
                             <nav aria-label="breadcrumb" class="blog-bradcrumb ">
                                 <ol class="breadcrumb bg-transparent mb-0">
-                                    <li class="breadcrumb-item"><a :href='"/"'>Home</a></li>
-                                    <li class="breadcrumb-item active"><a href="#">MediaCenter</a></li>
-                                    <li class="breadcrumb-item active"><a href="#">Press Release</a></li>
+
+                                    <li class="breadcrumb-item"><a href='#/'>Home</a></li>
+                                    <li class="breadcrumb-item active"><a href='#/AllReleases'>MediaCenter</a></li>
+
+                                    <li class="breadcrumb-item active"><a href='#/'>Press Release</a></li>
                                 </ol>
                             </nav>
                         </div>
@@ -41,7 +43,7 @@
                         <div class="container">
                             <div class="row  margin-bottom">
                                 <div class="col-lg-3 col-md-6" v-for="(article,index) in articles" :key=" index">
-                                    <div class="review-box"  :style="{ backgroundImage:`linear-gradient(rgb(0 0 0 / 47%), rgb(0, 0, 0, 0.4)),url(${article.urlToImage})`  }">
+                                    <div class="review-box" :style="{ backgroundImage:`linear-gradient(rgb(0 0 0 / 47%), rgb(0, 0, 0, 0.4)),url(${article.urlToImage})`  }">
 
                                         <h5>{{article.publishedAt}}</h5>
 
@@ -98,7 +100,7 @@ export default {
         this.getAllTitles()
     },
     methods: {
-        seeAll( id) {
+        seeAll(id) {
             // this.articles = []
             // this.getRelease()
             var y = this.articles;
@@ -106,7 +108,7 @@ export default {
             for (var i = 0; i < y.length; i++) {
                 if (y[i].id > id) {
                     y[i].publishedAt = moment(y[i].publishedAt).format('DD MMMM dddd,YYYY')
-                                    this.articles.push(y[i])
+                    this.articles.push(y[i])
 
                 }
             }

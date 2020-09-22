@@ -1720,7 +1720,7 @@
 
  
   p.caption-about {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
   .price-carousel .owl-dots {
     margin-top: 17px !important;
@@ -1936,10 +1936,7 @@
   .testimonial{
     &.owl-theme {
       .owl-nav{
-        &.disabled + .owl-dots{
-          position: absolute;
-          top: 80%;
-        }
+     
       }
     }
   }
@@ -2046,9 +2043,7 @@
   .blog-sec .blog-list > div + div .blog-item {
     margin-top: 30px;
   }
-  .owl-theme .owl-nav.disabled + .owl-dots {
-    position: relative;
-  }
+ 
   .price-block .btn-custom {
     width: auto;
   }

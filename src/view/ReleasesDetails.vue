@@ -12,10 +12,10 @@
                     <div class="col-md-6 col-sm-6 col-text-center">
                         <nav aria-label="breadcrumb" class="blog-bradcrumb ">
                             <ol class="breadcrumb bg-transparent mb-0">
-                                <li class="breadcrumb-item"><a :href='"/"'>Home</a></li>
-                                <li class="breadcrumb-item active"><a href="#">MediaCenter</a></li>
-                                <li class="breadcrumb-item active"><a href="#">Press Release</a></li>
-                                <li class="breadcrumb-item active"><a href="#">Press Release</a></li>
+                                <li class="breadcrumb-item"><a href='#/'>Home</a></li>
+                                <li class="breadcrumb-item active"><a href='#/AllReleases'>MediaCenter</a></li>
+                                <li class="breadcrumb-item active"><a href='#/'>Press Release</a></li>
+                                <li class="breadcrumb-item active"><a href='#/'>Press Release</a></li>
                             </ol>
                         </nav>
                     </div>

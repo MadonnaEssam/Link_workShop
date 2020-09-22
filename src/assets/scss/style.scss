@@ -144,10 +144,15 @@ section {
     padding: 0;
   }
 }
+.navbar-brand img {
+    
+  height: 100px;
+}
 .navbar-light {
   .default-nav {
     .navbar-nav {
       .nav-link {
+
         font-size: 15px;
         font-weight: 400;
         color: #777;
@@ -466,6 +471,7 @@ ul {
 
 .theme-nav {
   .navbar {
+    min-height: 135px;
     background-color: white;
   }
   .dropdown-item{
@@ -624,13 +630,8 @@ ul {
   }
 }
 
-
-
-
 .fixed-top {
   background: white;
-  // padding-top: 15px;
-  // padding-bottom: 15px;
   transition: all 0.3s ease;
   max-height: 90px;
 }
@@ -757,7 +758,10 @@ ul {
   position: relative;
   align-items: center;
 }
-
+.about-phone{p{
+  color: $white
+}
+}
 .about-decor {
   .about-circle1 {
     position: absolute;
@@ -783,8 +787,8 @@ ul {
   background: $color_bright_turquoise;
   background: linear-gradient(to bottom, $color_bright_turquoise 0, $color_scooter 99%);
   border-radius: 100%;
-  height: 600px;
-  width: 600px;
+  height:400px;
+  width:400px;
   float: right;
   display: flex;
   align-items: center;
@@ -1459,7 +1463,7 @@ ul {
 }
 .testimonial-text {
   background:
-  linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)),$img_1 no-repeat;
+  linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)),$img_2 no-repeat;
   text-align: center;
   box-shadow: 0 0 65px 0 $color_silver_chalice_25;
   background-color: $white;
@@ -1468,7 +1472,13 @@ ul {
   padding-right: 40px;
   padding-bottom: 40px;
   margin-bottom: 97px;
-
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 250px;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
   h3 {
     color: $white;
     margin-bottom: 0;
@@ -1556,10 +1566,8 @@ ul {
 }
 
 .contact {
-  //  background-image: $url_14;
   position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
+ 
   overflow: hidden;
   .contact-us {
     height: 100%;

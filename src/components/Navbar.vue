@@ -9,8 +9,8 @@
 
             <b-collapse class="default-nav" is-nav id="nav_collapse">
                 <b-navbar-nav class="navbar-nav ml-auto" id="mymenu">
-                    <b-nav-item href="#home">Home</b-nav-item>
-                    <b-nav-item href="#about">Who We Are</b-nav-item>
+                    <b-nav-item href="#/">Home</b-nav-item>
+                    <b-nav-item href="#/about">Who We Are</b-nav-item>
 
                     <b-nav-item-dropdown right-alignment text="What We Do" class="navbar-link">
                         <b-dropdown-item class="navbar-link" target="_blank" >Research</b-dropdown-item>
@@ -19,16 +19,16 @@
                         <b-dropdown-item class="navbar-link" target="_blank" >in2HC</b-dropdown-item>
 
                     </b-nav-item-dropdown>
-                    <b-nav-item href="#team">Get Involved</b-nav-item>
+                    <b-nav-item href="">Get Involved</b-nav-item>
 
-                    <b-nav-item-dropdown right-alignment href="#Other_page" text="Media Centre" class="navbar-link ">
+                    <b-nav-item-dropdown right-alignment href="#/AllReleases" text="Media Centre" class="navbar-link ">
                         <b-dropdown-item class="navbar-link" target="_blank" >Photo Gallery</b-dropdown-item>
                         <b-dropdown-item class="navbar-link" target="_blank" >Video Gallery</b-dropdown-item>
-                        <b-dropdown-item class="navbar-link" target="_blank" >Social Media Hub</b-dropdown-item>
+                        <b-dropdown-item class="navbar-link"  href="#/AllReleases" >Social Media Hub</b-dropdown-item>
                         <b-dropdown-item class="navbar-link" target="_blank" >Events</b-dropdown-item>
 
                     </b-nav-item-dropdown>
-                    <b-nav-item href="#contact">Contact Us</b-nav-item>
+                    <b-nav-item href="#/contact">Contact Us</b-nav-item>
 
                 </b-navbar-nav>
             </b-collapse>
@@ -45,9 +45,4 @@ export default {
 }
 </script>
 
-<style>
-.navbar-brand img {
-    
-    height: 60px;
-}
-</style>
+
