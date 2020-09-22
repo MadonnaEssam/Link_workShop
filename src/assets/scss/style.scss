@@ -53,7 +53,7 @@ h1 {
   font-size: 63px;
   margin-top: 25px;
   margin-bottom: 40px;
-  color: $color_bright_turquoise;
+  color: $green;
   
   font-weight: 300;
 }
@@ -63,7 +63,7 @@ h2 {
   font-size: 30px;
   font-weight: 300;
   margin-bottom: 32px;
-  color: $color_tundora;
+  color: $green;
   
   letter-spacing: 4px;
 }
@@ -73,7 +73,7 @@ h3 {
   font-size: 16px;
   font-weight: 600;
   margin-top: 30px;
-  color: $color_tundora;
+  color: $green;
   text-transform: capitalize;
   letter-spacing: 1px;
 }
@@ -93,7 +93,7 @@ h5 {
   margin-top: 15px;
   margin-bottom: 0;
   letter-spacing: 0.1em;
-  color: $color_tapa;
+  color:$green;
 }
 
 h6 {
@@ -102,7 +102,7 @@ h6 {
   
   letter-spacing: 0.1em;
   margin-top: 25px;
-  color: $color_tapa;
+  color: $green;
   margin-bottom: 25px;
 }
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
@@ -155,7 +155,7 @@ section {
 
         font-size: 15px;
         font-weight: 400;
-        color: #777;
+        color: $green;
         
         letter-spacing: 0;
       }
@@ -264,7 +264,9 @@ ul {
   background-color: $color_bright_turquoise;
 }
 
-
+.whiteone{
+  background: $white!important;
+}
 .btn-custom {
   color: $white;
   font-size: 14px;
@@ -276,10 +278,12 @@ ul {
   background-size: 300% 100%;
   transition: all .4s ease-in-out;
   &.theme-color {
-    background: transparent;
+    background: $green;
+
     background-image: wheat;
     border: 1px solid white;
     color: white;  }
+  
   &:hover {
     background-position: 100% 0;
     transition: all .4s ease-in-out;
@@ -479,9 +483,13 @@ ul {
       background-color: transparent;
     }
   }
+  .fa-search{
+    transform: scale(-1, 1);
+    font-size: 15px;
+  }
   .nav-item {
     font-size: 14px;
-    padding: 20px 0 20px 7px;
+    padding: 20px 0 20px 40px;
     color: $color_tapa;
     
     letter-spacing: 1px;
@@ -494,7 +502,7 @@ ul {
         transition:all 0.3s ease;
         outline: none !important;
         &:hover{
-          //  color: #018695 !important;
+          //  color: $green !important;
         }
       }
     }
@@ -579,7 +587,7 @@ ul {
       padding: 0;
       .nav-link {
         &.active{
-          color: #018695  ;
+          color: $green  ;
           transition: all 0.3s ease-in-out;
         }
       }
@@ -631,11 +639,34 @@ ul {
 }
 
 .fixed-top {
-  background: white;
+  background: $gray;
   transition: all 0.3s ease;
   max-height: 90px;
+  top:75px!important
 }
+.header{
+  height: 75px;
+  background: white;
+  position: fixed;
+  position: fixed;
+ 
+  right: 0;
+  left: 0;
+  z-index: 1030;
 
+}
+.header img{
+  float:left
+}
+.login{
+  float: right;
+  background: transparent!important;
+  border: none!important;
+  color: $green!important;
+}
+.headerImg{
+  height: 75px;
+}
 .darkHeader {
   background: $white;
   box-shadow: 1px 1px 12px 1px rgba(221, 221, 221, 0.4);
@@ -1422,7 +1453,7 @@ ul {
 
 .testimonial-avtar {
   //  background-image: $url_13;
-  background:#018695;
+  background:$green;
   border-radius: 100%;
   width: 70px;
     height: 70px;
@@ -1474,11 +1505,8 @@ ul {
   margin-bottom: 97px;
   background-position: center;
   background-size: cover;
-  width: 100%;
-  height: 250px;
+  
   box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  text-align: center;
   h3 {
     color: $white;
     margin-bottom: 0;
@@ -2261,7 +2289,7 @@ iframe.video-play {
       width: 100px;
       height: 100px;
       line-height: 2.3;
-      background-image: linear-gradient(to right, #19d3dc, #018695, #018695);
+      background-image: linear-gradient(to right, #19d3dc, $green, $green);
     }
   }
 }
@@ -2292,7 +2320,7 @@ iframe.video-play {
         }
         span {
           border: 1px solid white;
-          background: #018695;
+          background: $green;
           background: linear-gradient(to bottom, $color_bright_turquoise 0,$color_scooter 100%);
           transition: all 0.3s ease; }
       }
@@ -2304,8 +2332,8 @@ iframe.video-play {
     .owl-dots {
       .owl-dot {
         span {
-          background: #018695;
-          background: linear-gradient(to bottom, #018695 0, #19d0de 100%);
+          background: $green;
+          background: linear-gradient(to bottom, $green 0, #19d0de 100%);
           transition: all 0.3s ease;
         }
         &.active{
@@ -2318,8 +2346,8 @@ iframe.video-play {
   }
 }
 .team-carousel.owl-theme .owl-dots .owl-dot.active span {
-  background: #018695;
-  background: linear-gradient(to bottom, #018695 0, #19d0de 100%);
+  background: $green;
+  background: linear-gradient(to bottom, $green 0, #19d0de 100%);
   width: 25px;
   transition: all 0.3s ease; }
 .team-carousel button:focus {
@@ -2332,12 +2360,12 @@ iframe.video-play {
   top: -80px;
   right: 0; }
 .blog-carousel.owl-theme .owl-dots .owl-dot span {
-  background: #018695;
-  background: linear-gradient(to bottom, #018695 0, #19d0de 100%);
+  background: $green;
+  background: linear-gradient(to bottom, $green 0, #19d0de 100%);
   transition: all 0.3s ease; }
 .blog-carousel.owl-theme .owl-dots .owl-dot.active span {
-  background: #018695;
-  background: linear-gradient(to bottom, #018695 0, #19d0de 100%);
+  background: $green;
+  background: linear-gradient(to bottom, $green 0, #19d0de 100%);
   width: 25px;
   transition: all 0.3s ease; }
 .blog-carousel button:focus {
@@ -2346,18 +2374,18 @@ iframe.video-play {
 .price-carousel .price-item {
   margin: 3px; }
 .price-carousel.owl-theme .owl-dots .owl-dot span {
-  background: #018695;
-  background: linear-gradient(to bottom, #018695 0, #19d0de 100%);
+  background: $green;
+  background: linear-gradient(to bottom, $green 0, #19d0de 100%);
   transition: all 0.3s ease; }
 .price-carousel.owl-theme .owl-dots .owl-dot.active span {
-  background: #018695;
-  background: linear-gradient(to bottom, #018695 0, #19d0de 100%);
+  background: $green;
+  background: linear-gradient(to bottom, $green 0, #19d0de 100%);
   width: 25px;
   transition: all 0.3s ease; }
 
 .testimonial-carousel.owl-theme .owl-dots .owl-dot.active span {
-  background: #018695;
-  background: linear-gradient(to bottom, #018695 0, #19d0de 100%);
+  background: $green;
+  background: linear-gradient(to bottom, $green 0, #19d0de 100%);
   width: 25px;
   transition: all 0.3s ease; }
 .testimonial-carousel.owl-theme .owl-nav [class*=owl-]:hover {
@@ -2426,19 +2454,17 @@ iframe.video-play {
     width: 100%;
     margin: 0 15px;
   }
-  .home-style-two .navbar-light .default-nav .navbar-nav .nav-link.active, .three .navbar-light .default-nav .navbar-nav .nav-link.active {
-    color: #018695;
-  }
+
   .navbar-light .navbar-brand{
     order: -1;
     //background-color: white;
   }
   .theme-nav .navbar-nav{
-    background-color: white;
+    background-color: $gray;
     padding: 15px;
     border-radius: 5px;
   }
   nav.darkHeader.navbar-light .navbar-nav .nav-link.active {
-    color: #018695 !important;
+    color: $green !important;
   }
 }

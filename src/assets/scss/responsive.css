@@ -806,10 +806,7 @@
   .navbarSupportedContent {
     color: #777777; }
 
-  .home-style-two .navbar-light .navbar-nav .nav-link {
-    color: #777777; }
-  .home-style-two .darkHeader .navbar-nav .active > .nav-link {
-    color: #0bc2f9;; }
+ 
 
   .img-scroll {
     left: 19px;
@@ -849,7 +846,7 @@
       margin-left: 0; }
 
   .navbar-light .navbar-nav .nav-link {
-    color: #777777; }
+    color: $color_tapa ; }
 
   .price-feature li {
     padding: 5px; }
